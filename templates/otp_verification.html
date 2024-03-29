@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+</head>
+<body>
+    <h1>OTP Verification</h1>
+    <form action="/verify_otp/" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="name" value="{{ data_to_pass.name }}">
+        <input type="hidden" name="age" value="{{ data_to_pass.age }}">
+        <input type="hidden" name="gender" value="{{ data_to_pass.gender }}">
+        <input type="hidden" name="city" value="{{ data_to_pass.city }}">
+        <input type="hidden" name="state" value="{{ data_to_pass.state }}">
+        <input type="hidden" name="country" value="{{ data_to_pass.country }}">
+        <input type="hidden" name="email_address" value="{{ data_to_pass.email_address }}">
+        <input type="hidden" name="query" value="{{ data_to_pass.query }}">
+        <input type="hidden" name="phone_number" value="{{ data_to_pass.phone_number }}">
+        <input type="hidden" name="disease" value="{{ data_to_pass.disease }}">
+        <input type="hidden" name="pathies" value="{{ data_to_pass.pathies }}">
+        <input type="hidden" name="show_email" value="{{ data_to_pass.show_email }}">
+        <input type="hidden" name="show_study" value="{{ data_to_pass.show_study }}">
+        <input type="hidden" name="reports" value="{{ data_to_pass.reports }}">
+        <label for="otp">Enter OTP:</label>
+        <input type="text" id="submitted_otp" name="submitted_otp">
+        <button type="submit">Verify OTP</button>
+    </form>
+</body>
