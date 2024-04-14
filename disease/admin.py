@@ -27,7 +27,7 @@ class DiseaseAdmin(ImportExportModelAdmin):
 
 
 class PathyAdmin(ImportExportModelAdmin):           # Modified admin.ModelAdmin -> ImportExportAdmin
-    resource_class = PathyResource                  # PathyResource Class Imported from resources.py
+    resource_class = PathyResource                  # PathyResource Class Imported from resources.py.py
     list_filter = ("disease__name", "show")
     search_fields = ("name",)
 

@@ -94,21 +94,15 @@ WSGI_APPLICATION = "health_umbrella_foundation_backend.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    # "default": {
-    #     "ENGINE": "django.db.backends.sqlite3",
-    #     "NAME": BASE_DIR / "db.sqlite3",
-    # }
-
-    # AWS RDS connection settings
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "test",
-        "USER": "postgres",
-        "PASSWORD": "1234",
-        "HOST": "localhost",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sample',
+        'USER': 'root',
+        'PASSWORD': 'pklUHw:Im|$9~.T',
+        'HOST': 'localhost',  # or the hostname where your MySQL server is running
+        'PORT': '3306',      # or the port on which your MySQL server is listening
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

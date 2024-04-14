@@ -8,6 +8,7 @@ import time
 from datetime import datetime
 logger = logging.getLogger('file_log')
 
+
 class HomeView(View):
     def get(self, request):
         start_time = time.time()
