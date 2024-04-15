@@ -1,4 +1,3 @@
-<pre>
 The Health Umbrella Foundation is a platform designed to assist individuals who have been misled by unreliable online sources regarding their specific medical conditions. It provides access to scientifically validated data on disease treatments that have been experimentally proven effective. Additionally, the website offers information on the top hospitals specializing in each disease and provides curated YouTube and testimonial links to guide users toward better health outcomes
 <br />
 <br />
@@ -21,6 +20,6 @@ In settings.py, add HOST_USER and HOST_PASSWORD to enable OTP verification<br />
 <br />
 <br />
 Open http://127.0.0.1:8000/ to view it in the browser.
-</pre>
+
 
 
