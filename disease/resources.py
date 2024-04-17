@@ -53,7 +53,7 @@ class BookResource(resources.ModelResource):
     )
 
     def get_disease_name(self, obj):
-        logger.debug('Debug message here')
+
         disease_name = ''
         if obj.pathy:
             disease_name = obj.pathy.disease.name

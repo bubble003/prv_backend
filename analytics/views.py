@@ -112,3 +112,12 @@ def get_disease_data(request, disease):
     context["pie_chart_info"] = pie_chart_info 
 
     return render(request, "analytics/disease_analytics.html", context)
+
+
+'''def blog_post(request,post_id):                   #for views count
+
+    blog_object=Blog.objects.get(id=post_id)
+    blog_object.blog_views=blog_object.blog_views+1
+    blog_object.save()'''
+
+

@@ -1,7 +1,10 @@
 from django.contrib import admin
 from .models import feedback_table
+from .resources import *
+from import_export.admin import ImportExportModelAdmin, ExportMixin
 
-class FeedbackAdmin(admin.ModelAdmin):
+class FeedbackAdmin(ImportExportModelAdmin):
+    resources_class = FeedbackResource
     list_display = ("feedback", "rating", "average_rating",)
     list_filter = ("rating",)
     readonly_fields = ("average_rating",)
