@@ -1,12 +1,23 @@
 from django.contrib import admin
 from .models import join_us_table, share_experience_table, ask_suggestion_table
-
-class JoinUsAdmin(admin.ModelAdmin):
+from django.contrib import admin
+from import_export import resources, fields
+from import_export.admin import ImportExportModelAdmin, ExportMixin
+from import_export.widgets import ForeignKeyWidget
+from .models import (
+    join_us_table,
+    share_experience_table,
+    ask_suggestion_table,
+)
+from .resources import *
+class JoinUsAdmin(ImportExportModelAdmin):
+    resource_class = JoinUsResources
     list_display = ("name","identity_verified")
     list_filter = ("identity_verified",)
     search_fields = ("name", "phone_number",)
 
-class ShareExperienceAdmin(admin.ModelAdmin):
+class ShareExperienceAdmin(ImportExportModelAdmin):
+    resource_class = ShareExperienceResources
     list_display = ("name","disease","email_address",)
     search_fields = (
         "name",
@@ -20,7 +31,8 @@ class ShareExperienceAdmin(admin.ModelAdmin):
         "pathies"
     )
 
-class AskSuggestionAdmin(admin.ModelAdmin):
+class AskSuggestionAdmin(ImportExportModelAdmin):
+    resource_class = AskSuggeestionsResources
     list_display = ("name","email_address",)
     search_fields = (
         "name",
